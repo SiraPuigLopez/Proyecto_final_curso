@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;500;900&display=swap");
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+}
+body {
+  background: #24c6dc;
+  background: -webkit-linear-gradient(to right, #514a9d, #24c6dc);
+  background: linear-gradient(to right, #514a9d, #24c6dc);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Kanit", sans-serif;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 5rem;
+  color: #f7d272;
+}
+.datos-meteo {
+  width: 75rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba (255, 0, 0, 0.4);
+  border: 1px solid black;
+}
+ul {
+  width: 50rem;
+  list-style-type: none;
+  display: inline-block;
+  /* flex-direction: row; */
+  color: #efe9db;
+  border: 1px solid black;
+  align-items: center;
+  column-count: 3;
+  padding: 2rem;
+}
+.simbolo {
+  width: 5rem;
+  height: 5rem;
+  align-items: center;
+}
+
+.texto-temperatura,
+.texto-opciones,
+.historico-nacimiento {
+  width: 50%;
+  font-size: 2.5rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #f6a93c;
+}
