@@ -6,7 +6,7 @@ import Datosmeteo from "./componentes/Datosmeteo";
 const weatherFetch = async () => {
   try {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=Sevilla&appid=c1628b9d48c15cf4fb0b05878949ae61`
+      `https://api.openweathermap.org/data/2.5/weather?q=Sevilla&appid=c1628b9d48c15cf4fb0b05878949ae61&units=metric`
     );
     const ciudad = await response.json();
 
@@ -37,7 +37,13 @@ function App() {
     <div className="App">
       <Header></Header>
       <div className="datos-meteo">
-        <Datosmeteo>{ciudad}</Datosmeteo>
+        {ciudad !== null ? (
+          <Datosmeteo ciudad={ciudad}></Datosmeteo>
+        ) : (
+          <>
+            <p>Cargando...</p>
+          </>
+        )}
         <div className="texto-temperatura">
           <p>Vestimenta que debes usar según un condicional</p>
         </div>

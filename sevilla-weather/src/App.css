@@ -47,11 +47,6 @@ ul {
   column-count: 3;
   padding: 2rem;
 }
-.simbolo {
-  width: 5rem;
-  height: 5rem;
-  align-items: center;
-}
 
 .texto-temperatura,
 .texto-opciones,
