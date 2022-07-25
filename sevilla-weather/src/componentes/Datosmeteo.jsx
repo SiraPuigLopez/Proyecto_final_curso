@@ -1,5 +1,6 @@
 import React from "react";
 import { WiDaySunny, WiCloudy, WiRain } from "react-icons/wi";
+import "../estilos/Datosmeteo.css";
 
 const Datosmeteo = (props) => {
   //const { name, main, wind } = props;
@@ -7,9 +8,9 @@ const Datosmeteo = (props) => {
   return (
     <div>
       <ul>
-        <li>Humedad{props.children.main.humidity}</li>
-        <li>Viento</li>
-        <li>Temperatura</li>
+        <li>Humedad {props.ciudad.main.humidity}</li>
+        <li>Viento {props.ciudad.wind.speed}</li>
+        <li>Temperatura {props.ciudad.main.temp}</li>
         <li>
           <WiDaySunny className="simbolo"></WiDaySunny>
         </li>
