@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./componentes/Header";
 import Datosmeteo from "./componentes/Datosmeteo";
+import Consejo from "./componentes/Consejo";
 
 const weatherFetch = async () => {
   try {
@@ -29,8 +30,6 @@ function App() {
   useEffect(() => {
     fetchCiudad();
   }, []);
-
-  //const { name, main, wind } = ciudadActual;
   console.log(ciudad);
 
   return (
@@ -45,14 +44,14 @@ function App() {
           </>
         )}
         <div className="texto-temperatura">
-          <p>Vestimenta que debes usar según un condicional</p>
+          <Consejo ciudad={ciudad}></Consejo>
         </div>
-        <div className="texto-opciones">
+        {/* <div className="texto-opciones">
           <p>No vayas o si según otro condicional</p>
         </div>
         <div className="historico-nacimiento">
           <p>indicar año de nacimiento y capturar datos meteo</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
