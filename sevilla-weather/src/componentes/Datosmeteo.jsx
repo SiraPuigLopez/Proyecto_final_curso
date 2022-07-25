@@ -3,8 +3,8 @@ import { WiDaySunny, WiCloudy, WiRain } from "react-icons/wi";
 import "../estilos/Datosmeteo.css";
 
 const Datosmeteo = (props) => {
-  //const { name, main, wind } = props;
   console.log(props);
+
   return (
     <div>
       <ul>
@@ -13,9 +13,10 @@ const Datosmeteo = (props) => {
         <li>Temperatura {props.ciudad.main.temp}</li>
         <li>
           <WiDaySunny className="simbolo"></WiDaySunny>
+          <img src="" alt=""></img>
         </li>
-        <li>Max</li>
-        <li>Min</li>
+        <li>Max {props.ciudad.main.temp_max}</li>
+        <li>Min {props.ciudad.main.temp_min}</li>
       </ul>
     </div>
   );
