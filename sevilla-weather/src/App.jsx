@@ -19,7 +19,7 @@ const weatherFetch = async () => {
 
 function App() {
   const [ciudad, setCiudad] = useState(null);
-  //Andrea me salvo la vida con este null
+
   const fetchCiudad = async () => {
     try {
       const data = await weatherFetch();
@@ -44,7 +44,13 @@ function App() {
           </>
         )}
         <div className="texto-temperatura">
-          <Consejo ciudad={ciudad}></Consejo>
+          {ciudad !== null ? (
+            <Consejo ciudad={ciudad}></Consejo>
+          ) : (
+            <>
+              <p>Cargando...</p>
+            </>
+          )}
         </div>
         {/* <div className="texto-opciones">
           <p>No vayas o si según otro condicional</p>

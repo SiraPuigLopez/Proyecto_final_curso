@@ -2,8 +2,8 @@ import React from "react";
 import "../estilos/Consejo.css";
 
 const Consejo = (props) => {
-  let temp = 20;
-  //props.ciudad.main.temp;
+  //let temp = 20;
+  const temp = props.ciudad.main.temp;
   let consejo;
 
   if (temp >= 40 && temp < 43) {
