@@ -5,9 +5,10 @@ import Datosmeteo from "./componentes/Datosmeteo";
 import Consejo from "./componentes/Consejo";
 
 const weatherFetch = async () => {
+  //defino la funcion
   try {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=Sevilla&appid=c1628b9d48c15cf4fb0b05878949ae61&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?q=Sevilla&appid=${process.env.REACT_APP_API_KEY}&units=metric`
     );
     const ciudad = await response.json();
 
